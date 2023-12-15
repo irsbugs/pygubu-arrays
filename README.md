@@ -26,7 +26,12 @@ self.label_14.config(text="0")
 self.label_15.config(text="1")
 ```
 Coding for the individual labels is cumbersome, and is more efficiently performed using an array or list of label objects.
-
+```
+for i in range(0, len(self.label_list), 2):
+    self.label_list[i].config(text = "0")
+for i in range(1, len(self.label_list), 2):
+    self.label_list[i].config(text = "1")
+```
 
 
 
