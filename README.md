@@ -13,7 +13,7 @@
 
 The Pygubu Designer will allow a container to have individual labels. It does not support creation of an array of labels within a container.
 
-For example, you may wish to have a tkinter Labelframe container to have 16 labels to represent individual binary bits in a 16 bit register.
+For example, you may wish to have a tkinter Labelframe container to have 16 labels to represent individual binary bits in a 16 bit register ![16bit_register](/images/16bit_register.png)
 
 
 
