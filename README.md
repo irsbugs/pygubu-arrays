@@ -9,7 +9,13 @@
 
 * [Pygubu-designer](https://pypi.org/project/pygubu-designer/) - A simple GUI designer for the python tkinter module, that helps you create the xml definition graphically.
 
-asdx
+## Issue
+
+The Pygubu Designer will allow a container to have individual labels. It does not support creation of an array of labels within a container.
+
+For example, you may wish to have a tkinter Labelframe container to have 16 labels to represent individual binary bits in a 16 bit register.
+
+
 
 
 
