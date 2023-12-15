@@ -49,6 +49,8 @@ The *Pygubu Designer* then generates the following python code to launch the app
 
 ![generated_code](/images/generated_code.png)
 
+asd
+
 
 
 
