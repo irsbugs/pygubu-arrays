@@ -39,13 +39,17 @@ The following describes how to use Pygubu Designer to create a basic GUI applica
 Using *Pygubu Designer* a simple application is created 
 ![pygubu_designer](/images/pygubu_designer.png)
 
-This application has the following tkinter objects
+This application has the following tkinter objects: A Toplevel container, two LabelFrame containers, and three Buttons.
 
 ![objects](/images/objects.png)
 
 This application is saved as XML script in the UI file [test.ui](test.ui)
 
-The Designer then generates the following code
+The *Pygubu Designer* then generates the following python code to launch the application. During launching the XML in the test.ui file is used to build the GUI
+
+![generated_code](generated_code.png)
+
+
 
 
 
