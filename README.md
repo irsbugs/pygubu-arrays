@@ -47,7 +47,7 @@ This application is saved as XML script in the UI file [test.ui](test.ui)
 
 The *Pygubu Designer* then generates the following python code to launch the application. During launching the XML in the test.ui file is used to build the GUI
 
-![generated_code](generated_code.png)
+![generated_code](/images/generated_code.png)
 
 
 
