@@ -50,12 +50,17 @@ The *Pygubu Designer* then generates the following python code to launch the app
 
 ![generated_code](/images/generated_code.png)
 
-The python application [testapp_designer_code.py](testapp_designer_code.py) will be display like this
+On running the python application [testapp_designer_code.py](testapp_designer_code.py) it will be displayed as follows.
 
 ![testapp_designer_code](/images/testapp_designer_code.png)
 
+The top Labelframe does not contain any labels. The python designer code needs to be enhanced to add a label array so the application will look like this
+
+![label_array_demo](/images/label_array_demo.png)
 
 asd
+
+
 
 
 
