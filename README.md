@@ -40,6 +40,7 @@ Using *Pygubu Designer* a simple application is created
 ![pygubu_designer](/images/pygubu_designer.png)
 
 This application has the following tkinter objects
+
 ![objects](/images/objects.png)
 
 This application is saved as XML script in the UI file [test.ui](test.ui)
