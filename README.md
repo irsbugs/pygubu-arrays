@@ -58,7 +58,11 @@ The top Labelframe does not contain any labels. The python designer code needs t
 
 ![label_array_demo](/images/label_array_demo.png)
 
-asd
+## Enhancing the Python Code
+
+The original code is enhanced as follows:
+
+* 
 
 
 
