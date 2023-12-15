@@ -30,8 +30,7 @@ Coding for the individual labels is cumbersome, and is more efficiently performe
 ```
 for i in range(0, len(self.label_list), 2):
     self.label_list[i].config(text="0")
-for i in range(1, len(self.label_list), 2):
-    self.label_list[i].config(text="1")
+    self.label_list[i+1].config(text="1")
 ```
 The following describes how to use Pygubu Designer to create a basic GUI application, then how to manually add a label array to the application.
 
