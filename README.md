@@ -61,10 +61,39 @@ The top Labelframe does not contain any labels. The python designer code needs t
 
 The original *Pygubu Designer* generated code is enhanced as follows to create the file [testapp_label_array.py](testapp_label_array.py)
 
-* 
+* Add class wide variables for the two labelframes.
+* Add the ttk.style() library for use in setup of labels.
+* Change the text in both labeframes.
+* Run a method to setup the label array
+* Enhance the button callback method to perfrom updates of the label array.
+
+The python code added / changed is:
+
+### Add class wide variables for the two labelframes.
+```
+        self.labelframe_0 = builder.get_object("labelframe1", master)
+        self.labelframe_1 = builder.get_object("labelframe2", master)
+```
+
+### Add the ttk.style() library for use in setup of labels.
+```
+        self.style = ttk.Style()
+```
+
+###  Change the text in both labeframes.
+```
+        #  See what text the top label frame has from Design mode.
+        print(self.labelframe_0.cget("text"))
+        #  See if the text of the top label frame can be changed to something else
+        self.labelframe_0.config(text="Register bits")
+        print(self.labelframe_0.cget("text"))
+
+        # Set text on bottom label frame.
+        self.labelframe_1.config(text="Select Register Contents")
+```
 
 
-
+asd
 
 
 
