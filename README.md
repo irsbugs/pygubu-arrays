@@ -53,13 +53,13 @@ On running the python application [testapp_designer_code.py](testapp_designer_co
 
 ![testapp_designer_code](/images/testapp_designer_code.png)
 
-The top Labelframe does not contain any labels. The python designer code needs to be manually enhanced to add a label array so the application will look like this
+The top Labelframe does not contain any labels. The python designer code needs to be manually enhanced to add a label array so the application will look like this:
 
 ![label_array_demo](/images/label_array_demo.png)
 
 ## Enhancing the Python Code
 
-The original code is enhanced as follows:
+The original *Pygubu Designer* generated code is enhanced as follows to create the file [testapp_label_array.py](testapp_label_array.py)
 
 * 
 
