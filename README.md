@@ -61,7 +61,7 @@ The top Labelframe does not contain any labels. The python *Pygubu Designer* cod
 
 ## Enhancing the Python Code
 
-The original *Pygubu Designer* generated code, [testappp_designer_code.py](testapp_designer_code.py) is enhanced as follows to create the file [testapp_label_array.py](testapp_label_array.py)
+The original *Pygubu Designer* generated code, [testappp_designer_code.py](testapp_designer_code.py), is enhanced as follows to create the file [testapp_label_array.py](testapp_label_array.py)
 
 * Add class wide variables for the two labelframes.
 * Add the ttk.style() library for use in setup of labels.
