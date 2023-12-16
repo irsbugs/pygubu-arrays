@@ -28,15 +28,15 @@ self.label_2.config(text="0")
 self.label_14.config(text="0")
 self.label_15.config(text="1")
 ```
-Coding for the individual labels is cumbersome, and is more efficiently performed using an array or list of label objects.
+Coding for the individual labels is cumbersome, and is more efficiently performed using an array, or list, of label objects.
 ```
 for i in range(0, len(self.label_list), 2):
     self.label_list[i].config(text="0")
     self.label_list[i+1].config(text="1")
 ```
-The following describes how to use Pygubu Designer to create a basic GUI application, then how to manually add a label array to the application.
+The following describes how to use *Pygubu Designer* to create a basic GUI application, then how to manually add a label array to the application.
 
-##Test Application Example
+## Test Application Example
 
 Using *Pygubu Designer* a simple application is created 
 ![pygubu_designer](/images/pygubu_designer.png)
@@ -47,7 +47,7 @@ This application has the following tkinter objects: A Toplevel container, two La
 
 This application is saved as XML script in the UI file [test.ui](test.ui)
 
-The *Pygubu Designer* then generates the following python code to launch the application. During launching the XML in the test.ui file is used to build the GUI
+The *Pygubu Designer* then generates the following python code to launch the application. During launching the XML in the `test.ui` file is used to build the GUI
 
 ![generated_code](/images/generated_code.png)
 
@@ -55,7 +55,7 @@ On running the python application [testapp_designer_code.py](testapp_designer_co
 
 ![testapp_designer_code](/images/testapp_designer_code.png)
 
-The top Labelframe does not contain any labels. The python designer code needs to be manually enhanced to add a label array so the application will look like this:
+The top Labelframe does not contain any labels. The python *Pygubu Designer* code needs to be manually enhanced to add a label array so the application will look like this:
 
 ![label_array_demo](/images/label_array_demo.png)
 
@@ -95,7 +95,6 @@ Normally these text changes would be done in *Pygubu Designer* mode. They are do
         self.labelframe_1.config(text="Select Register Contents")
 ```
 
-
 ### Run a method to setup the label array
 The following method is added to setup the label array in `self.labelframe_0`. This method is called at the end of the `def __init__(self, master=None):` with the code `self.setup_register_bits()`
 
@@ -114,7 +113,7 @@ The following method is added to setup the label array in `self.labelframe_0`. T
             self.label_list[i].grid(row=0, column=i,)
 ```
 ###  Enhance the button callback method to perfrom updates of the label array.
-*Pygubu Designer* provides a callback template, based on how it was setup for the three buttons. The callback also passes each buttons id as a string, so which button has been clicked on can be easily determined. The code below shows the advantages of using a label array, `self.label_list[]`, in the little code is required to fill the label array with data.
+*Pygubu Designer* provides a callback template method, based on how it was setup for the three buttons. The callback also passes each buttons id as a string, so which button has been clicked on can be easily determined. The code below shows the advantages of using a label array, `self.label_list[]`, and the little code that is required to fill the label array with data.
 
 ```
     def button_cb(self, widget_id):  # <-- Method heading provided by pygubu designer
@@ -144,7 +143,7 @@ The following method is added to setup the label array in `self.labelframe_0`. T
                 self.label_list[i+1].config(text = "1")
 ```
 
-For an alternative to what button3 does, then change `if widget_id == "button3":` to `if widget_id == "buttonx":`, and change  `if widget_id == "buttonx":` to: `if widget_id == "button3":`. On clicking the *Mix* button a randomly generated 16-bit binary number wi9ll then be placed into the label array. The following is the alternative button3 code:
+For an alternative to what button3 does, then change `if widget_id == "button3":` to `if widget_id == "buttonx":`, and change  `if widget_id == "buttonx":` to: `if widget_id == "button3":`. On clicking the *Mix* button a randomly generated 16-bit binary number will then be placed into the label array. The following is the alternative button3 code:
 
 ```
         if widget_id == "buttonx":
@@ -173,7 +172,7 @@ Download from this repository the following files:
 * testapp_designer_code.py
 * testapp_label_array.py
 
-Run the programs, and try clicking on the buttons, with:
+Run the two programs, and try clicking on the buttons:
 * $ python3 testapp_designer_code.py
 * $ python3 testapp_label_array.py
 
