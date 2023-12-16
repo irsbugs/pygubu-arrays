@@ -1,6 +1,8 @@
 # Pygubu-arrays
 
-* Manually add a label array to a Pygubu Designer created tkinter application. 
+The objective is to demonstrate: 
+
+* Manually adding a label array to a *Pygubu Designer* created tkinter application. 
 * Create class-wide instance variables for tkinter widgets.
 
 ## Pygubu and Pygubu-Designer 
@@ -111,6 +113,77 @@ The following method is added to setup the label array in `self.labelframe_0`. T
                                     style="Bits.TLabel",))
             self.label_list[i].grid(row=0, column=i,)
 ```
+###  Enhance the button callback method to perfrom updates of the label array.
+*Pygubu Designer* provides a callback template, based on how it was setup for the three buttons. The callback also passes each buttons id as a string, so which button has been clicked on can be easily determined. The code below shows the advantages of using a label array, `self.label_list[]`, in the little code is required to fill the label array with data.
+
+```
+    def button_cb(self, widget_id):  # <-- Method heading provided by pygubu designer
+        #pass
+        """
+        Manually added...
+        Callback for buttons was set in pygubu design mode with Type:"Set Widgit ID".
+        Set all register bits to either zeros or ones or a mix of zero and ones.
+        Simple loop to update label_list. More complex to update if this was a
+        series of individual label objects.
+        """
+        #print(widget_id)  #  button1, or button2, etc...
+
+        #  zeros
+        if  widget_id == "button1":
+            for i in range(len(self.label_list)):
+                self.label_list[i].config(text = "0")
+        #  ones
+        if widget_id == "button2":
+            for i in range(len(self.label_list)):
+                self.label_list[i].config(text = "1")
+
+        #  mix of ones and zeros
+        if widget_id == "button3":
+            for i in range(0, len(self.label_list), 2):
+                self.label_list[i].config(text = "0")
+                self.label_list[i+1].config(text = "1")
+```
+
+For an alternative to what button3 does, then change `if widget_id == "button3":` to `if widget_id == "buttonx":`, and change  `if widget_id == "buttonx":` to: `if widget_id == "button3":`. On clicking the *Mix* button a randomly generated 16-bit binary number wi9ll then be placed into the label array. The following is the alternative button3 code:
+
+```
+        if widget_id == "buttonx":
+            """
+            Alternative for button3.
+            Manually edit 'if widget_id == "button3":' to "buttonx" and vica versa
+            Fill label array with a random number between 0 and 65535 / hex FFFF
+            """
+            import random
+            dec_integer = random.randint(0, 65535)
+            print(dec_integer)
+            bin_integer_list = list(bin(dec_integer)[2:].zfill(16))
+            for i in range(0, len(self.label_list)):
+                self.label_list[i].config(text = bin_integer_list[i])
+```
+## Running the demonstration:
+
+On a computer ensure the following are installed:
+* A recent version of python3
+* Tkinter
+* Pygubu
+* Pybugu-Designer
+
+Download from this repository the following files:
+* test.ui
+* testapp_designer_code.py
+* testapp_label_array.py
+
+Run the programs, and try clicking on the buttons, with:
+* $ python3 testapp_designer_code.py
+* $ python3 testapp_label_array.py
+
+## Note:
+The code in this repository was developed and tested on:
+* Ubuntu Mate 22.04
+* Python 3.10.12
+* tkinter 8.6.12, tkinter.ttk.__version__ 0.3.1'
+* pygubu 0.31 
+* pygubu-designer 0.36 
 
 
 
