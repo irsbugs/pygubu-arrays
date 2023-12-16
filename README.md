@@ -81,6 +81,7 @@ The python code added / changed is:
 ```
 
 ###  Change the text in both labeframes.
+Normally these text changes would be done in *Pygubu Designer* mode. They are done using `.config(text="")` just for demonstration purposes: 
 ```
         #  See what text the top label frame has from Design mode.
         print(self.labelframe_0.cget("text"))
@@ -93,7 +94,25 @@ The python code added / changed is:
 ```
 
 
-asd
+### Run a method to setup the label array
+The following method is added to setup the label array in `self.labelframe_0`. This method is called at the end of the `def __init__(self, master=None):` with the code `self.setup_register_bits()`
+
+```
+    def setup_register_bits(self):
+        """
+        Create an array of labels in the Register Bits Labelframe, self.labelframe_0.
+        Fill labels with spaces.
+        """
+        self.style.configure("Bits.TLabel", borderwidth=1, font=('Helvetica', 11),
+                                relief="solid", width = 2, anchor="center")
+        self.label_list = []
+        for i in range(16):
+            self.label_list.append(ttk.Label(self.labelframe_0, text=str(" "),
+                                    style="Bits.TLabel",))
+            self.label_list[i].grid(row=0, column=i,)
+```
+
+
 
 
 
