@@ -1,4 +1,4 @@
-# Pygubu-arrays
+# Pygubu Arrays
 
 The objective is to demonstrate: 
 
